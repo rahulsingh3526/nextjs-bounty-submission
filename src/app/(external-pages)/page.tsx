@@ -15,8 +15,16 @@ import { OrbitingCirclesDemo } from '@/components/orbiting-circles';
 import { DefaultTextComponent } from '@/components/default-text-component';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import TextReveal from '@/components/magicui/text-reveal';
 
 const LandingPage = () => {
+  const array = [1, 2, 3, 4];
   return (
     <div>
       <div className=" flex flex-col items-center justify-center gap-y-2 m-10">
@@ -83,10 +91,9 @@ const LandingPage = () => {
       </div>
       <div className="flex flex-col justify-center items-center gap-y-4">
         <Image src={quote} alt="quote" />
-        <h1 className="text-3xl">
-          lorem ipsum dolor sit amet, consecterur adpiscing elit integer nex
-          odio prasenet libero
-        </h1>
+        <div className="z-10 flex min-h-[16rem] items-center justify-center rounded-lg border bg-white dark:bg-black">
+          <TextReveal text="Magic UI will change the way you design." />
+        </div>
 
         <div className="flex justify-center items-center gap-x-4">
           {' '}
@@ -117,21 +124,57 @@ const LandingPage = () => {
         {' '}
         <OrbitingCirclesDemo />
       </div>
-      <MarqueeDemo />
 
-      <div className=" flex flex-col items-center justify-center gap-y-2 m-10">
-        {' '}
-        <Image src={badgeicon1} alt="badge icons" />
-        <h1 className="text-3xl font-semibold">
-          {' '}
-          Discover Next-Level Features
-        </h1>
+      <div className="flex flex-col items-center justify-center gap-y-2 m-10">
+        <div className="flex justify-center items-center"> </div>
+        <h1 className="text-3xl font-semibold"> Dont take our word for it</h1>
         <p className="text-[#64748B] text-center">
-          Discover the ultiimate insights into cutting-edge advancements.Our
-          next-level <br />
-          features guide reveals the essentials for staying ahead.
+          <span>
+            Hear what our satisfied customers have to say about Nextbase
+          </span>
         </p>
       </div>
+
+      <MarqueeDemo />
+
+      <DefaultTextComponent
+        image1={badgeicon1}
+        image2={badgeicon2}
+        text1="Pricing"
+        text2="Quality without any compormise"
+        text3="CI/CD streamlines feature delivery , scalable infrastructre ensurees global"
+        text4=" edge optimisation and app monitoring capanilities for a peak sit performance"
+      />
+
+      <DefaultTextComponent
+        image1={badgeicon1}
+        image2={badgeicon2}
+        text1="FAQ"
+        text2="Frequently asked questions"
+        text3="Get detailed answers to common questions edge optimisation and app"
+        text4="monitoring capanilities for a peak sit performance"
+      />
+      <div className="mx-auto flex justify-center items-center flex-col gap-y-1">
+        {array.map((data, index) => (
+          <Accordion key={index} type="single" collapsible>
+            <AccordionItem value={`item-${index}`}>
+              <AccordionTrigger> is it styled</AccordionTrigger>
+              <AccordionContent>
+                yes, it comes with default styles
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        ))}
+      </div>
+
+      <DefaultTextComponent
+        image1={badgeicon1}
+        image2={badgeicon2}
+        text1="Start your journey..."
+        text2="Ready to move with ultimate"
+        text3="CI/CD streamlines feature delivery , scalable infrastructre ensurees global"
+        text4="monitoring capanilities for a peak sit performance"
+      />
     </div>
   );
 };

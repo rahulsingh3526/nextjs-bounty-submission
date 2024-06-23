@@ -1,6 +1,6 @@
 import React from 'react';
 import { Badge } from './ui/badge';
-import Image, { StaticImageData, StaticImageData } from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 // const data = [
 //   {
@@ -14,10 +14,10 @@ import Image, { StaticImageData, StaticImageData } from 'next/image';
 interface Props {
   image1: StaticImageData;
   image2: StaticImageData;
-  text1: string;
-  text2: string;
-  text3: string;
-  text4: string;
+  text1?: string;
+  text2?: string;
+  text3?: string;
+  text4?: string;
 }
 
 export const DefaultTextComponent = ({
