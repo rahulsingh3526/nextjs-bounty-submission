@@ -31,7 +31,7 @@ export const DefaultTextComponent = ({
             <Image src={image2} alt="badge icons" />
           </Badge>
         </div>
-        <h1 className="text-3xl font-semibold">
+        <h1 className="sm:text-xl text-3xl font-semibold">
           {' '}
           <LetterPullup words={text2 ?? ''} delay={0.05} />{' '}
         </h1>

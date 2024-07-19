@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import badgeicon1 from '../../../public/icons/SVG_margin.png';
@@ -21,10 +20,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import TextReveal from '@/components/magicui/text-reveal';
 
 const LandingPage = () => {
   const array = [1, 2, 3, 4];
+
   return (
     <div>
       <div className=" flex flex-col items-center justify-center gap-y-2 m-10">
@@ -90,9 +89,9 @@ const LandingPage = () => {
         <BentoDemo />
       </div>
       <div className="flex flex-col justify-center items-center gap-y-4">
-        <div className="z-10 flex min-h-[16rem] items-center justify-center rounded-lg bg-white dark:bg-black">
+        <div className="z-10 max-w-[800px] flex min-h-[16rem] items-center justify-center rounded-lg bg-white dark:bg-black">
           <LetterPullup
-            words={'Magic UI will change the way you design.'}
+            words={'Magic UI will change your design'}
             delay={0.05}
           />
           ;
@@ -130,7 +129,10 @@ const LandingPage = () => {
 
       <div className="flex flex-col items-center justify-center gap-y-2 m-10">
         <div className="flex justify-center items-center"> </div>
-        <h1 className="text-3xl font-semibold"> Dont take our word for it</h1>
+        <h1 className="text-2xl md:text-3xl font-semibold">
+          {' '}
+          Dont take our word for it
+        </h1>
         <p className="text-[#64748B] text-center">
           <span>
             Hear what our satisfied customers have to say about Nextbase

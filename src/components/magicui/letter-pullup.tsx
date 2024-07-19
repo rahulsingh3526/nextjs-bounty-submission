@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
 interface LetterPullupProps {
   className?: string;
@@ -15,7 +15,7 @@ export default function LetterPullup({
   words,
   delay,
 }: LetterPullupProps) {
-  const letters = words.split("");
+  const letters = words.split('');
 
   const pullupVariant = {
     initial: { y: 100, opacity: 0 },
@@ -38,11 +38,11 @@ export default function LetterPullup({
           animate="animate"
           custom={i}
           className={cn(
-            "font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-4xl md:leading-[5rem]",
+            'font-display text-center text-2xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-4xl md:leading-[5rem]',
             className,
           )}
         >
-          {letter === " " ? <span>&nbsp;</span> : letter}
+          {letter === ' ' ? <span>&nbsp;</span> : letter}
         </motion.h1>
       ))}
     </div>
