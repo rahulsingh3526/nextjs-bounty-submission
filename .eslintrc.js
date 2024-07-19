@@ -11,10 +11,10 @@ module.exports = {
   overrides: [
     {
       extends: [
-        'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
+        // 'eslint:recommended',
+        // 'plugin:@typescript-eslint/recommended',
         'prettier',
-        'plugin:@next/next/recommended',
+        // 'plugin:@next/next/recommended',
       ],
       parser: '@typescript-eslint/parser',
       parserOptions: {
