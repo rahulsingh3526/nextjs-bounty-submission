@@ -12,7 +12,7 @@ export const Footer = () => {
             </div>
             <p>Acme Inc. 123 Acme Street,London,Uk,SWAI</p>
           </div>
-          <div className="flex gap-x-8 justify-center items-top">
+          <div className="flex flex-col md:flex-row gap-x-8 justify-center items-top">
             <div>
               <p className="uppercase">Resources</p>
               <p>Nextbase</p>
